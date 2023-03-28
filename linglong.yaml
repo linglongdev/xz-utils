@@ -1,0 +1,24 @@
+package:
+  id: xz-utils
+  name: xz-utils
+  version: 5.2.4.1
+  kind: lib
+  description: |
+    xz-utils.
+
+base:
+  id: org.deepin.base
+  version: 20.5.0
+
+source:
+  kind: git
+  url: https://github.com/deepin-community/xz-utils.git
+  version: master
+  commit: 9eb691f95977199f92ae235d4ca63a3854f3534a
+
+  patch:
+  - Translations-Add-Brazilian-Portuguese-translation-of-man-.patch
+  - po-pt_BR-Revert-changes-from-the-release.patch
+  - Translations-Update-the-Brazilian-Portuguese-translation.patch
+build:
+  kind: autotools
